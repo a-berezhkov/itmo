@@ -44,7 +44,7 @@ jobs:
         run: |
           docker run -d -p 80:80 --name itmo ${{ secrets.DOCKER_USERNAME }}/itmo:latest
       - name: Deploy to remote server
-        uses: appleboy/ssh-action@v0.1.8
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
